@@ -16,7 +16,7 @@ bot.onText(/^\d{4}-\d{2}-\d{2}$/, (msg) => {
     const day = msg.text
     bot.sendMessage(msg.chat.id, "OK, the cont down date is " + msg.text);
     dayMap.set(msg.chat.id, day)
-    job = schedule.scheduleJob('0 * * * * *', () => {
+    job = schedule.scheduleJob('0 0 0 * * *', () => {
         let today = new Date().getTime()
         let endDay = new Date(day).getTime()
         let differenceDay = Math.ceil((endDay-today) / (1000 * 3600 * 24));
