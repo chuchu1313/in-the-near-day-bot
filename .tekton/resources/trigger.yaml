@@ -25,7 +25,7 @@ spec:
   - name: commit-sha
     value: $(body.head_commit.id)
   - name: image-registry-url
-    value: $(body.repository.full_name)
+    value: wei840222/in-the-near-day-bot
   template:
     spec:
       params:
@@ -49,7 +49,7 @@ spec:
           - name: image-registry-url
             value: $(tt.params.image-registry-url)
           - name: application-namespace
-            value: default
+            value: chuchu1313
           - name: application-name
             value: in-the-near-day-bot
           workspaces:
