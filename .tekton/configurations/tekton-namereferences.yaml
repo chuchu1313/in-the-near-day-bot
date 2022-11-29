@@ -1,0 +1,16 @@
+nameReference:
+- kind: Pipeline
+  group: tekton.dev
+  version: v1beta1
+  fieldSpecs:
+  - path: spec/template/spec/resourcetemplates/spec/pipelineRef/name
+    kind: Trigger
+    group: triggers.tekton.dev
+    version: v1beta1
+- kind: ServiceAccount
+  version: v1
+  fieldSpecs:
+  - path: spec/template/spec/resourcetemplates/spec/serviceAccountName
+    kind: Trigger
+    group: triggers.tekton.dev
+    version: v1beta1

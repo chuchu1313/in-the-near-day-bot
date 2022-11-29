@@ -1,3 +1,4 @@
+const http = require('http');
 const TelegramBot = require('node-telegram-bot-api');
 const schedule = require('node-schedule')
 const token = '5870266794:AAHWa4yA_KYsVRtir_OHEYX9nX1MvtpQ4w8';
@@ -39,3 +40,12 @@ bot.onText(/\/stop/, message => {
         job.cancel()
     }
 });
+
+const server = http.createServer((_, res) => {
+    res.writeHead(200);
+    res.end('OK');
+});
+
+server.listen(8080);
+
+process.on('SIGTERM', () => server.close());
