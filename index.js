@@ -12,7 +12,7 @@ function dayDifference(day, msg) {
     let today = new Date().getTime();
     let endDay = new Date(day).getTime();
     let differenceDay = Math.ceil((endDay - today) / (1000 * 3600 * 24));
-    bot.sendMessage(msg.chat.id, differenceDay + ' day left to ' + msg.text + '\u{1F389}');
+    bot.sendMessage(msg.chat.id, differenceDay + ' days left to ' + msg.text + '\u{1F389}');
 }
 
 bot.onText(/^\/\d{4}-\d{2}-\d{2}$/, (msg) => {
