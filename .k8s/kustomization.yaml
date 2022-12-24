@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ./resources/redis.yaml
+- ./resources/deployment.yaml
+configMapGenerator:
+- name: redis
+  options:
+    disableNameSuffixHash: true
+  files:
+  - redis-additional.conf=./configs/redis.conf
+images:
+- name: wei840222/in-the-near-day-bot
+  newTag: f5564
