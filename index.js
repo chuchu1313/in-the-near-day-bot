@@ -163,5 +163,3 @@ server.listen(8080, () => {
 });
 
 process.on('SIGTERM', () => server.close());
-
-// TOKEN=5870266794:AAHWa4yA_KYsVRtir_OHEYX9nX1MvtpQ4w8 node index.js
