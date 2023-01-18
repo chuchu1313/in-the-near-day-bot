@@ -1,0 +1,25 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "semi": [2, "never"],
+        //该规则规定了分号前后的空格，具体规定如下。
+        "semi-spacing": [
+            2,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "quotes": [
+            1,
+            "single",
+            "avoid-escape"
+        ]
+    }
+}
